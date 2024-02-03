@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   pageButtonText: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'Poppins-Regular', // this is not working
     fontWeight: '400',
     fontSize: 16,
   },
