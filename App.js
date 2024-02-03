@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import LogInScreen from './app/screens/LogInScreen';
+import {StyleSheet} from 'react-native';
 
+import LogInScreen from './app/screens/LogInScreen';
+import HomeScreen from './app/screens/HomeScreen';
 
 export default function App() {
 
   return (
-    <LogInScreen />
+    <HomeScreen style={{backgroundColor: 'red'}} />
+    
   );
 
 }
