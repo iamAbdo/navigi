@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import { useNavigation } from '@react-navigation/native';
 
 // Unused imports are comment for now
 import LogInScreen from './app/screens/LogInScreen';

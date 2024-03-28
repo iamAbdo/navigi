@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, TextInput, Image, TouchableOpacity, StyleSheet, Text, StatusBar } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ navigation }) => {
+const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
         <View style={styles.Headerline}>
