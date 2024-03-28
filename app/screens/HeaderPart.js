@@ -1,7 +1,11 @@
 import React from 'react';
 import { View, TextInput, Image, TouchableOpacity, StyleSheet, Text, StatusBar } from 'react-native';
 
-const Header = () => {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
+
+const Header = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <View style={styles.Headerline}>
@@ -18,10 +22,12 @@ const Header = () => {
                     />
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity onPress={() => navigation.navigate('LogInScreen')}>
             <Image
-            source={require('../assets/icons/UserIcon.png')}
-            style={styles.profileImage}
+              source={require('../assets/icons/UserIcon.png')}
+              style={styles.profileImage}
             />
+            </TouchableOpacity>
         </View>
         <View style={styles.Headerline}>
             <TouchableOpacity
@@ -54,6 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#7A9E9F',
     paddingTop: StatusBar.currentHeight,
     alignItems: 'center',
+    alignSelf: 'stretch',
     justifyContent: 'center',
   },
   Headerline: {
@@ -90,7 +97,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   pageButtonText: {
-    fontFamily: 'Poppins-Regular', // this is not working
+    //fontFamily: 'Poppins-Regular', // this is not working
     fontWeight: '400',
     fontSize: 16,
   },
