@@ -16,7 +16,7 @@ const ProgressBarWithShadow = ({ progress, title }) => {
             shadowColor: '#000', shadowOffset: { width: 2, height: 2 }, 
             shadowOpacity: 0.25, shadowRadius: 3.84, elevation: 5 }}>
             <ProgressBar
-            color="#0000FF"
+            color="#7A9E9F"
             style={{ height: 10, borderRadius: 5 }}
             progress={progress}
             />
