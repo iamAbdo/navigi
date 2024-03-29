@@ -17,11 +17,15 @@ const FONTS = {
 };
 
 const Profile = ({ navigation }) => {
+
+  const [profileData, setProfileData] = useState({
+    name: "Senouci Ahmed",
+    email: "snouClove@gmail.com",
+    phone: "123-456-7890",
+    address: "Alger, Algeria",
+  });
+
   const [selectedImage, setSelectedImage] = useState(null);
-  const [name, setName] = useState("Senouci Ahmed");
-  const [email, setEmail] = useState("snouClove@gmail.com");
-  const [password, setPassword] = useState("randompassword");
-  const [country, setCountry] = useState("Algeria");
 
   const handleImageSelection = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -42,7 +46,7 @@ const Profile = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.goBack()} style={{ position: "absolute", left: 0 }}>
           <MaterialIcons name="keyboard-arrow-left" size={24} color={COLORS.black} />
         </TouchableOpacity>
-        <Text style={{ ...FONTS.h3 }}>Edit Profile</Text>
+        <Text style={{ ...FONTS.h3 }}>Profile</Text>
       </View>
       <ScrollView 
         showsVerticalScrollIndicator={false}
@@ -65,37 +69,33 @@ const Profile = ({ navigation }) => {
             </View>
           </TouchableOpacity>
         </View>
-        <View>
-          <View style={{ flexDirection: "column", marginBottom: 6 }}>
-            <Text style={{ ...FONTS.h4 }}>Name</Text>
-            <View style={{ height: 44, borderColor: COLORS.secondaryGray, borderWidth: 1, borderRadius: 4, marginVertical: 6 }}>
-              <TextInput value={name} onChangeText={(value) => setName(value)} />
-            </View>
-          </View>
-          <View style={{ flexDirection: "column", marginBottom: 6 }}>
-            <Text style={{ ...FONTS.h4 }}>Email</Text>
-            <View style={{ height: 44, borderColor: COLORS.secondaryGray, borderWidth: 1, borderRadius: 4, marginVertical: 6 }}>
-              <TextInput value={email} onChangeText={(value) => setEmail(value)} />
-            </View>
-          </View>
-          <View style={{ flexDirection: "column", marginBottom: 6 }}>
-            <Text style={{ ...FONTS.h4 }}>Password</Text>
-            <View style={{ height: 44, borderColor: COLORS.secondaryGray, borderWidth: 1, borderRadius: 4, marginVertical: 6 }}>
-              <TextInput value={password} onChangeText={(value) => setPassword(value)} secureTextEntry />
-            </View>
-          </View>
-          <View style={{ flexDirection: "column", marginBottom: 6 }}>
-            <Text style={{ ...FONTS.h4 }}>Country</Text>
-            <View style={{ height: 44, borderColor: COLORS.secondaryGray, borderWidth: 1, borderRadius: 4, marginVertical: 6 }}>
-              <TextInput value={country} onChangeText={(value) => setCountry(value)} />
-            </View>
-          </View>
+
+        
+        <View style={{ marginBottom: 20 }}>
+          <ProfileItem icon="person" label="Name" value={profileData.name} />
+          <ProfileItem icon="email" label="Email" value={profileData.email} />
+          <ProfileItem icon="phone" label="Phone" value={profileData.phone} />
+          <ProfileItem icon="location-on" label="Address" value={profileData.address} />
         </View>
-        <TouchableOpacity style={{ backgroundColor: COLORS.primary, marginBottom: 20, height: 44, borderRadius: 6, alignItems: "center", justifyContent: "center" }}>
-          <Text style={{ ...FONTS.body3, color: COLORS.white }}>Save Changes</Text>
+
+        <TouchableOpacity style={{ backgroundColor: COLORS.primary, height: 44, borderRadius: 6, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ ...FONTS.body3, color: COLORS.white }}>Contact</Text>
         </TouchableOpacity>
+        
+
+
       </ScrollView>
     </SafeAreaView>
+  );
+};
+
+const ProfileItem = ({ icon, label, value }) => {
+  return (
+    <View style={{ flexDirection: "row", marginBottom: 6, alignItems: "center" }}>
+      <MaterialIcons name={icon} size={24} color={COLORS.primary} style={{ marginRight: 10 }} />
+      <Text style={{ ...FONTS.h4 }}>{label}: </Text>
+      <Text>{value}</Text>
+    </View>
   );
 };
 
