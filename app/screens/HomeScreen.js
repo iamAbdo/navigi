@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, ViewComponent } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -10,6 +10,7 @@ import MediaCard from './components/card';
 
 const HomeScreen = () => {
   return (
+    <View style={{backgroundColor: "#7A9E9F" , flex: 1}}>
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.pageContainer}>
       <Header/>
@@ -96,6 +97,7 @@ const HomeScreen = () => {
       <StatusBar style="auto" />
     </View>
   </SafeAreaView>
+  </View>
   );
 };
 

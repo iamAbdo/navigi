@@ -57,7 +57,6 @@ const Header = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#7A9E9F',
-    paddingTop: StatusBar.currentHeight,
     alignItems: 'center',
     alignSelf: 'stretch',
     justifyContent: 'center',
