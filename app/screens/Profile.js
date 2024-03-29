@@ -4,10 +4,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
+import ProgressBarWithShadow from './components/ProgressBarWithShadow';
+
 // Constants for COLORS and FONTS
 const COLORS = {
   white: "#FFFFFF",
   primary: "#007bff",
+  progres: "red",
   secondaryGray: "#CED4DA",
 };
 const FONTS = {
@@ -23,8 +26,17 @@ const Profile = ({ navigation }) => {
     email: "snouClove@gmail.com",
     phone: "123-456-7890",
     address: "Alger, Algeria",
+    description: "I am an accomplished front-end developer with a passion for creating stunning and responsive user interfaces. With a solid foundation in HTML, CSS, and JavaScript, I have successfully delivered engaging web experiences across various platforms and devices. My expertise extends to modern front-end frameworks such as React.js and Vue.js, allowing me to build dynamic and interactive web applications efficiently. I thrive in collaborative environments and have a proven track record of working effectively in cross-functional teams to deliver high-quality projects on time and within budget. As a detail-oriented developer, I am committed to staying updated with the latest industry trends and best practices to ensure optimal performance and user satisfaction.",
+    skills: [
+      { title: "HTML", progress: 0.8 },
+      { title: "CSS", progress: 0.6 },
+      { title: "JavaScript", progress: 0.4 },
+      { title: "PHP", progress: 0.2 },
+      { title: "Canva", progress: 0.7 },
+    ],
   });
 
+  const [progress, setProgress] = useState(0.1);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageSelection = async () => {
@@ -77,6 +89,21 @@ const Profile = ({ navigation }) => {
           <ProfileItem icon="phone" label="Phone" value={profileData.phone} />
           <ProfileItem icon="location-on" label="Address" value={profileData.address} />
         </View>
+
+        {/* Description */}
+        <View style={{ marginBottom: 20 }}>
+          <Text style={{ ...FONTS.h4, paddingVertical: 10 }}>Profile Description</Text>
+          <Text>{profileData.description}</Text>
+        </View>
+
+        {/* Skills */}
+        <View style={{ marginBottom: 20 }}>
+          <Text style={{ ...FONTS.h4, paddingVertical: 20 }}>Skills</Text>
+          {profileData.skills.map((skill, index) => (
+            <ProgressBarWithShadow key={index} title={skill.title} progress={skill.progress} />
+          ))}
+        </View>
+
 
         <TouchableOpacity style={{ backgroundColor: COLORS.primary, height: 44, borderRadius: 6, alignItems: "center", justifyContent: "center" }}>
           <Text style={{ ...FONTS.body3, color: COLORS.white }}>Contact</Text>
