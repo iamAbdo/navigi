@@ -12,6 +12,7 @@ const COLORS = {
   primary: "#7A9E9F",
   secondaryGray: "#CED4DA",
 };
+
 const FONTS = {
   h3: { fontSize: 20, fontWeight: "bold" },
   h4: { fontSize: 16, fontWeight: "bold" },
@@ -66,7 +67,7 @@ const Profile = ({ navigation }) => {
         <View style={{ alignItems: "center", marginVertical: 22 }}>
           <TouchableOpacity onPress={handleImageSelection}>
             <Image
-              source={selectedImage ? { uri: selectedImage } : require("../assets/Logo.jpg")}
+              source={selectedImage ? { uri: selectedImage } : require("../assets/user1.jpg")}
               style={{
                 height: 170,
                 width: 170,
@@ -108,7 +109,7 @@ const Profile = ({ navigation }) => {
           <Text style={{ ...FONTS.body3, color: COLORS.white }}>Contact</Text>
         </TouchableOpacity>
         
-
+        <View style={{margin: 20}}></View>
 
       </ScrollView>
     </SafeAreaView>
