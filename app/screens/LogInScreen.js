@@ -2,10 +2,15 @@ import React from 'react';
 import { Button, StyleSheet, Text, TextInput, View, Alert, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { useNavigation } from '@react-navigation/native';
+
 // Constants
 const Separator = () => <View style={styles.separator} />;
 
 function LogInScreen(props) {
+
+  const navigation = useNavigation();
+
     return (
     <LinearGradient
         colors={['#FFF1EB', '#7A9E9F']}
@@ -27,7 +32,7 @@ function LogInScreen(props) {
 
         <Separator />
 
-        <Button title='Log In' onPress={() => Alert.alert('Logged In!')} />
+        <Button title='Log In' onPress={() => navigation.navigate('Home')} />
 
         <Separator />
 

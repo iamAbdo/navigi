@@ -22,16 +22,19 @@ const HomeScreen = () => {
             title='Informatique'
             image='Categories/informatique.jfif' // inside assets
             description={'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='ARCHITECT'
             image='Categories/informatique.jfif' // inside assets
             description={'what ever description we want to put here!'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='HAIR STYLIST'
             image='Categories/informatique.jfif' // inside assets
             description={'i think that the description is gotten from a backend api server with a key!'}
+            screen= 'Profile'
           />
       </ScrollView>
     </View>
@@ -44,16 +47,19 @@ const HomeScreen = () => {
             title='Informatique'
             image='Categories/informatique.jfif' // inside assets
             description={'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='ARCHITECT'
             image='Categories/informatique.jfif' // inside assets
             description={'what ever description we want to put here!'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='HAIR STYLIST'
             image='Categories/informatique.jfif' // inside assets
             description={'i think that the description is gotten from a backend api server with a key!'}
+            screen= 'Profile'
           />
       </ScrollView>
     </View>
@@ -66,16 +72,19 @@ const HomeScreen = () => {
             title='Informatique'
             image='Categories/informatique.jfif' // inside assets
             description={'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='ARCHITECT'
             image='Categories/informatique.jfif' // inside assets
             description={'what ever description we want to put here!'}
+            screen= 'Profile'
           />
           <MediaCard 
             title='HAIR STYLIST'
             image='Categories/informatique.jfif' // inside assets
             description={'i think that the description is gotten from a backend api server with a key!'}
+            screen= 'Profile'
           />
       </ScrollView>
     </View>
