@@ -8,6 +8,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from './HeaderPart';
 import MediaCard from './components/card';
 
+ScrollView.defaultProps = {
+  showsVerticalScrollIndicator: false,
+  showsHorizontalScrollIndicator: false,
+};
+
 const HomeScreen = () => {
   return (
     <View style={{backgroundColor: "#7A9E9F" , flex: 1}}>
@@ -71,7 +76,7 @@ const HomeScreen = () => {
       {/* Categories Container */}
       <View style={styles.container}>
         <SectionHeader title="Categories" />
-        <ScrollView horizontal contentContainerStyle={{gap: 10,paddingHorizontal: 5,}}> 
+        <ScrollView horizontal contentContainerStyle={{gap: 10,paddingHorizontal: 5, }}> 
             <MediaCard 
               title='Informatique'
               image='Categories/informatique.jfif' // inside assets
@@ -121,6 +126,7 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black',
     paddingBottom: 5,
     marginBottom: 10,
+    marginLeft: 20,
   },
   sectionHeaderText: {
     fontSize: 18,
