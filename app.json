@@ -4,10 +4,10 @@
     "slug": "navigi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/Logo.png",
+    "icon": "./app/assets/Logo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./app/assets/Logo.png",
+      "image": "./app/assets/Logo.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/Logo.png",
+        "foregroundImage": "./app/assets/Logo.jpg",
         "backgroundColor": "#ffffff"
       }
     },
