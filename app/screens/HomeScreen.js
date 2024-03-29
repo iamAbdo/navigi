@@ -10,7 +10,7 @@ import MediaCard from './components/card';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <View style={styles.pageContainer}>
       <Header/>
 
