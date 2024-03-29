@@ -38,9 +38,11 @@ function LogInScreen(props) {
 
         <Text style={styles.text}>You don't have an account ?</Text>
         <Text style={styles.text, {color: '#FFF'}}>SIGN UP</Text>
+
     </LinearGradient>
     );
 }
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
